@@ -37,7 +37,7 @@ stages {
   stage('Deploy') {
     steps {
         echo 'This is for deploying'
-        sh "docker compose up -d"
+        sh "docker compose down && docker compose up -d"
     }
   }
  }
